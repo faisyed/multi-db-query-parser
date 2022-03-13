@@ -1,0 +1,12 @@
+2022-03-13 16:26:21.475 | INFO     | utils.db_connector:create_connection:37 - Mysql - Successfully connected to database:8.0.27
+2022-03-13 16:26:21.536 | INFO     | utils.db_connector:create_connection:39 - Mysql - Cursor successfully created
+2022-03-13 16:26:21.601 | DEBUG    | utils.db_connector:run_query:69 - Mysql - Executed: select * from aisles
+2022-03-13 16:26:21.637 | INFO     | utils.db_connector:close_connection:50 - Mysql - Successfully closed the connection
+2022-03-13 16:35:41.271 | INFO     | utils.db_connector:create_connection:37 - Mysql - Successfully connected to database:8.0.27
+2022-03-13 16:35:41.271 | INFO     | utils.db_connector:create_connection:37 - Mysql - Successfully connected to database:8.0.27
+2022-03-13 16:35:41.341 | INFO     | utils.db_connector:create_connection:39 - Mysql - Cursor successfully created
+2022-03-13 16:35:41.341 | INFO     | utils.db_connector:create_connection:39 - Mysql - Cursor successfully created
+2022-03-13 16:35:41.398 | DEBUG    | utils.db_connector:run_query:69 - Mysql - Executed: select * from aisles
+2022-03-13 16:35:41.398 | DEBUG    | utils.db_connector:run_query:69 - Mysql - Executed: select * from aisles
+2022-03-13 16:35:41.437 | INFO     | utils.db_connector:close_connection:50 - Mysql - Successfully closed the connection
+2022-03-13 16:35:41.437 | INFO     | utils.db_connector:close_connection:50 - Mysql - Successfully closed the connection
