@@ -1,0 +1,31 @@
+2022-03-16 13:46:53.569 | ERROR    | utils.db_connector:create_connection:130 - {'S': 'FATAL', 'C': '28000', 'M': 'password authentication failed for user "awsuser_527_team9"', 'F': '../src/pg/src/backend/libpq/auth.c', 'L': '416', 'R': 'auth_failed'}
+2022-03-16 13:48:20.415 | ERROR    | utils.db_connector:create_connection:130 - {'S': 'FATAL', 'C': '28000', 'M': 'password authentication failed for user "awsuser_527_team9"', 'F': '../src/pg/src/backend/libpq/auth.c', 'L': '416', 'R': 'auth_failed'}
+2022-03-16 13:49:41.998 | INFO     | utils.db_connector:create_connection:128 - Redshift - Cursor successfully created
+2022-03-16 13:51:20.339 | INFO     | utils.db_connector:create_connection:128 - Redshift - Cursor successfully created
+2022-03-16 13:51:33.219 | INFO     | utils.db_connector:create_connection:128 - Redshift - Cursor successfully created
+2022-03-16 13:52:16.183 | INFO     | utils.db_connector:create_connection:128 - Redshift - Cursor successfully created
+2022-03-16 14:16:34.678 | INFO     | utils.db_connector:create_connection:128 - Redshift - Cursor successfully created
+2022-03-16 14:16:57.798 | INFO     | utils.db_connector:create_connection:128 - Redshift - Cursor successfully created
+2022-03-16 15:45:46.962 | INFO     | utils.db_connector:create_connection:128 - Redshift - Cursor successfully created
+2022-03-16 15:45:47.115 | DEBUG    | utils.db_connector:run_query:160 - Redshift - Executed: select * from category
+2022-03-16 15:46:16.112 | INFO     | utils.db_connector:create_connection:128 - Redshift - Cursor successfully created
+2022-03-16 15:46:16.259 | DEBUG    | utils.db_connector:run_query:160 - Redshift - Executed: select * from category
+2022-03-16 15:49:57.362 | ERROR    | utils.db_connector:create_connection:130 - ('communication error', TimeoutError(60, 'Operation timed out'))
+2022-03-16 15:51:40.936 | INFO     | utils.db_connector:create_connection:128 - Redshift - Cursor successfully created
+2022-03-16 15:51:41.073 | DEBUG    | utils.db_connector:run_query:160 - Redshift - Executed: select * from category
+2022-03-16 15:52:44.313 | INFO     | utils.db_connector:create_connection:128 - Redshift - Cursor successfully created
+2022-03-16 15:52:44.313 | INFO     | utils.db_connector:create_connection:128 - Redshift - Cursor successfully created
+2022-03-16 15:52:44.494 | DEBUG    | utils.db_connector:run_query:160 - Redshift - Executed: select * from category
+2022-03-16 15:52:44.494 | DEBUG    | utils.db_connector:run_query:160 - Redshift - Executed: select * from category
+2022-03-16 15:55:11.581 | INFO     | utils.db_connector:create_connection:127 - Redshift - Cursor successfully created
+2022-03-16 15:55:41.058 | INFO     | utils.db_connector:create_connection:127 - Redshift - Cursor successfully created
+2022-03-16 15:55:41.209 | DEBUG    | utils.db_connector:run_query:159 - Redshift - Executed: select * from category
+2022-03-16 15:55:41.211 | INFO     | utils.db_connector:close_connection:139 - Redshift - Successfully closed the connection
+2022-03-16 15:56:05.065 | INFO     | utils.db_connector:create_connection:127 - Redshift - Cursor successfully created
+2022-03-16 15:56:05.065 | INFO     | utils.db_connector:create_connection:127 - Redshift - Cursor successfully created
+2022-03-16 15:56:05.205 | DEBUG    | utils.db_connector:run_query:159 - Redshift - Executed: select * from category
+2022-03-16 15:56:05.205 | DEBUG    | utils.db_connector:run_query:159 - Redshift - Executed: select * from category
+2022-03-16 15:56:05.208 | INFO     | utils.db_connector:close_connection:139 - Redshift - Successfully closed the connection
+2022-03-16 15:56:05.208 | INFO     | utils.db_connector:close_connection:139 - Redshift - Successfully closed the connection
+2022-03-16 15:56:23.402 | INFO     | utils.db_connector:create_connection:127 - Redshift - Cursor successfully created
+2022-03-16 15:56:23.520 | DEBUG    | utils.db_connector:run_query:159 - Redshift - Executed: select * from category

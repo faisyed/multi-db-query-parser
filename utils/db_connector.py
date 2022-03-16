@@ -117,11 +117,10 @@ class RedshiftDBInstance:
         try:
             # initializing the connection object with new database connection
             self.connection = redshift_connector.connect(
-                host=config.redshift_db_conf["host"],
-                port=config.redshift_db_conf["port"],
-                user=config.redshift_db_conf["user"],
-                password=config.redshift_db_conf["password"],
-                database=config.redshift_db_conf["db_schema"]
+                host='instabase-redshift.cw9pifbp7tf6.us-east-1.redshift.amazonaws.com',
+                database='dev',
+                user='awsuser',
+                password='123Abcd!'
             )
             if self.connection:
                 self.cursor = self.connection.cursor()
@@ -134,7 +133,7 @@ class RedshiftDBInstance:
     # this method is used to close a connection to the redshift database
     def close_connection(self):
         try:
-            if self.connection and self.connection.is_connected():
+            if self.cursor:
                 self.cursor.close()
                 self.connection.close()
                 logger.info("Redshift - Successfully closed the connection")
@@ -152,7 +151,7 @@ class RedshiftDBInstance:
         # storing the resultant query time
         query_time = ""
         try:
-            if self.connection and self.connection.is_connected():
+            if self.cursor:
                 start_time = int(round(time() * 1000))
                 self.cursor.execute(query)
                 end_time = int(round(time() * 1000))

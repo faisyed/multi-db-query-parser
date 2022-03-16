@@ -10,3 +10,36 @@
 2022-03-13 16:35:41.398 | DEBUG    | utils.db_connector:run_query:69 - Mysql - Executed: select * from aisles
 2022-03-13 16:35:41.437 | INFO     | utils.db_connector:close_connection:50 - Mysql - Successfully closed the connection
 2022-03-13 16:35:41.437 | INFO     | utils.db_connector:close_connection:50 - Mysql - Successfully closed the connection
+2022-03-16 13:46:38.146 | INFO     | utils.db_connector:create_connection:37 - Mysql - Successfully connected to database:8.0.27
+2022-03-16 13:46:38.211 | INFO     | utils.db_connector:create_connection:39 - Mysql - Cursor successfully created
+2022-03-16 13:46:38.274 | DEBUG    | utils.db_connector:run_query:69 - Mysql - Executed: select * from aisles
+2022-03-16 13:46:38.313 | INFO     | utils.db_connector:close_connection:50 - Mysql - Successfully closed the connection
+2022-03-16 13:46:53.569 | ERROR    | utils.db_connector:create_connection:130 - {'S': 'FATAL', 'C': '28000', 'M': 'password authentication failed for user "awsuser_527_team9"', 'F': '../src/pg/src/backend/libpq/auth.c', 'L': '416', 'R': 'auth_failed'}
+2022-03-16 13:48:05.890 | INFO     | utils.db_connector:create_connection:37 - Mysql - Successfully connected to database:8.0.27
+2022-03-16 13:48:05.949 | INFO     | utils.db_connector:create_connection:39 - Mysql - Cursor successfully created
+2022-03-16 13:48:06.011 | DEBUG    | utils.db_connector:run_query:69 - Mysql - Executed: select * from aisles
+2022-03-16 13:48:06.045 | INFO     | utils.db_connector:close_connection:50 - Mysql - Successfully closed the connection
+2022-03-16 13:48:12.977 | INFO     | utils.db_connector:create_connection:37 - Mysql - Successfully connected to database:8.0.27
+2022-03-16 13:48:12.977 | INFO     | utils.db_connector:create_connection:37 - Mysql - Successfully connected to database:8.0.27
+2022-03-16 13:48:13.036 | INFO     | utils.db_connector:create_connection:39 - Mysql - Cursor successfully created
+2022-03-16 13:48:13.036 | INFO     | utils.db_connector:create_connection:39 - Mysql - Cursor successfully created
+2022-03-16 13:48:13.095 | DEBUG    | utils.db_connector:run_query:69 - Mysql - Executed: select * from aisles
+2022-03-16 13:48:13.095 | DEBUG    | utils.db_connector:run_query:69 - Mysql - Executed: select * from aisles
+2022-03-16 13:48:13.134 | INFO     | utils.db_connector:close_connection:50 - Mysql - Successfully closed the connection
+2022-03-16 13:48:13.134 | INFO     | utils.db_connector:close_connection:50 - Mysql - Successfully closed the connection
+2022-03-16 13:48:20.415 | ERROR    | utils.db_connector:create_connection:130 - {'S': 'FATAL', 'C': '28000', 'M': 'password authentication failed for user "awsuser_527_team9"', 'F': '../src/pg/src/backend/libpq/auth.c', 'L': '416', 'R': 'auth_failed'}
+2022-03-16 13:48:20.415 | ERROR    | utils.db_connector:create_connection:130 - {'S': 'FATAL', 'C': '28000', 'M': 'password authentication failed for user "awsuser_527_team9"', 'F': '../src/pg/src/backend/libpq/auth.c', 'L': '416', 'R': 'auth_failed'}
+2022-03-16 13:49:34.597 | INFO     | utils.db_connector:create_connection:37 - Mysql - Successfully connected to database:8.0.27
+2022-03-16 13:49:34.661 | INFO     | utils.db_connector:create_connection:39 - Mysql - Cursor successfully created
+2022-03-16 13:49:34.723 | DEBUG    | utils.db_connector:run_query:69 - Mysql - Executed: select * from aisles
+2022-03-16 13:49:34.759 | INFO     | utils.db_connector:close_connection:50 - Mysql - Successfully closed the connection
+2022-03-16 13:49:41.998 | INFO     | utils.db_connector:create_connection:128 - Redshift - Cursor successfully created
+2022-03-16 13:51:17.117 | INFO     | utils.db_connector:create_connection:37 - Mysql - Successfully connected to database:8.0.27
+2022-03-16 13:51:17.178 | INFO     | utils.db_connector:create_connection:39 - Mysql - Cursor successfully created
+2022-03-16 13:51:17.251 | DEBUG    | utils.db_connector:run_query:69 - Mysql - Executed: select * from aisles
+2022-03-16 13:51:17.286 | INFO     | utils.db_connector:close_connection:50 - Mysql - Successfully closed the connection
+2022-03-16 13:51:20.339 | INFO     | utils.db_connector:create_connection:128 - Redshift - Cursor successfully created
+2022-03-16 15:32:26.781 | INFO     | utils.db_connector:create_connection:37 - Mysql - Successfully connected to database:8.0.27
+2022-03-16 15:32:26.845 | INFO     | utils.db_connector:create_connection:39 - Mysql - Cursor successfully created
+2022-03-16 15:32:26.907 | DEBUG    | utils.db_connector:run_query:69 - Mysql - Executed: select * from aisles
+2022-03-16 15:32:26.960 | INFO     | utils.db_connector:close_connection:50 - Mysql - Successfully closed the connection
