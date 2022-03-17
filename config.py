@@ -12,9 +12,8 @@ mysql_db_conf = {
 
 # below set of configuration is to connect to the AWS Redshift
 redshift_db_conf = {
-    "host" : "redshift-cluster-cs527-team9.cpbazbmgbqsl.us-east-1.redshift.amazonaws.com",
+    "host" : "instabase-redshift.cw9pifbp7tf6.us-east-1.redshift.amazonaws.com",
     "port" : 5439,
-    "user" : "awsuser_527_team9",
-    "password" : "CS527_team9",
-    "db_schema" : "dev"
+    "user" : "awsuser",
+    "password" : "123Abcd!"
 }
