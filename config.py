@@ -7,8 +7,7 @@ mysql_db_conf = {
     "host" : "instabaserds.c16otsowwndg.us-east-1.rds.amazonaws.com",
     "port" : 3306,
     "user" : "admin",
-    "password" : "123Abcd!",
-    "db_schema" : "instacart"
+    "password" : "123Abcd!"
 }
 
 # below set of configuration is to connect to the AWS Redshift

@@ -22,15 +22,18 @@ class MysqlDBInstance:
         logger.add("logs/database_logs/mysql.log", level="DEBUG")
 
     # this method is used to create a connection to the mysql database
-    def create_connection(self):
+    def create_connection(self, schema):
         try:
+            db_schema = schema
+            if schema == "instacart":
+                db_schema = "instacart1"
             # initializing the connection object with new database connection
             self.connection = mysql.connector.connect(
                 host=config.mysql_db_conf["host"],
                 port=config.mysql_db_conf["port"],
                 user=config.mysql_db_conf["user"],
                 password=config.mysql_db_conf["password"],
-                database=config.mysql_db_conf["db_schema"]
+                database=db_schema
             )
             if self.connection and self.connection.is_connected():
                 db_info = self.connection.get_server_info()
@@ -79,9 +82,11 @@ class MysqlDBInstance:
                 # storing the results from the query
                 results = []
                 row = self.cursor.fetchone()
-                while row:
+                cnt = 1
+                while row and cnt<=2000:
                     results.append(json_map_generator(columns, row))
                     row = self.cursor.fetchone()
+                    cnt+=1
 
                 return "success", query, query_time, columns, results
 
@@ -113,12 +118,13 @@ class RedshiftDBInstance:
         logger.add("logs/database_logs/redshift.log", level="DEBUG")
 
     # this method is used to create a connection to the redshift database
-    def create_connection(self):
+    def create_connection(self, schema):
         try:
+            db_schema = schema
             # initializing the connection object with new database connection
             self.connection = redshift_connector.connect(
                 host='instabase-redshift.cw9pifbp7tf6.us-east-1.redshift.amazonaws.com',
-                database='dev',
+                database=db_schema,
                 user='awsuser',
                 password='123Abcd!'
             )
@@ -126,9 +132,8 @@ class RedshiftDBInstance:
                 self.cursor = self.connection.cursor()
                 logger.info("Redshift - Cursor successfully created")
         except redshift_connector.Error as err:
-            logger.error(err)
-            #error_map = {"error_code": err.pgcode, "error_msg": err.pgerror}
-            #logger.error("Redshift - Error during connection to database: " + str(error_map))
+            error_map = {"error_code": err.args[0]["C"], "error_msg": err.args[0]["M"]}
+            logger.error("Redshift - Error during connection to database: " + str(error_map))
 
     # this method is used to close a connection to the redshift database
     def close_connection(self):
@@ -138,9 +143,8 @@ class RedshiftDBInstance:
                 self.connection.close()
                 logger.info("Redshift - Successfully closed the connection")
         except redshift_connector.Error as err:
-            logger.error(err)
-            #error_map = {"error_code": err.pgcode, "error_msg": err.pgerror}
-            #logger.error("Redshift - Error during closing the database connection: " + str(error_map))
+            error_map = {"error_code": err.args[0]["C"], "error_msg": err.args[0]["M"]}
+            logger.error("Redshift - Error during closing the database connection: " + str(error_map))
 
     # this method is used to execute a query in the redshift database
     def run_query(self, query):
@@ -170,17 +174,17 @@ class RedshiftDBInstance:
                 results = []
                 counter = 0
                 row = self.cursor.fetchone()
-                while row:
+                while row and counter<=2000:
                     results.append(json_map_generator(columns, row))
                     row = self.cursor.fetchone()
+                    counter+=1
 
                 return "success", query, query_time, columns, results
 
         except redshift_connector.Error as err:
-            logger.error(err)
-            #error_map = {"error_code": err.pgcode, "error_msg": err.pgerror}
-            #logger.error("Redshift - Error while executing query: " + query + " Error info: " + str(error_map))
-            #return "failure", query_time, None, error_map
+            error_map = {"error_code": err.args[0]["C"], "error_msg": err.args[0]["M"]}
+            logger.error("Redshift - Error while executing query: " + query + " Error info: " + str(error_map))
+            return "failure", query, query_time, None, error_map
 
     # this method is used to commit the changes to the redshift database
     def commit(self):
@@ -189,6 +193,5 @@ class RedshiftDBInstance:
                 self.connection.commit()
                 logger.info("Redshift - Committed the changes successfully")
         except redshift_connector.Error as err:
-            logger.error(err)
-            # error_map = {"error_code": err.pgcode, "error_msg": err.pgerror}
-            # logger.error("Redshift - Error while committing changes: " + " Error info: " + str(error_map))
+            error_map = {"error_code": err.args[0]["C"], "error_msg": err.args[0]["M"]}
+            logger.error("Redshift - Error while committing changes: " + " Error info: " + str(error_map))

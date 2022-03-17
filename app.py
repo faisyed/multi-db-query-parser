@@ -41,9 +41,12 @@ def query_parse():
     query = request.args.get("query")
     query = query.lower()
 
+    schema = request.args.get("schema")
+    schema = schema.lower()
+
     if database == "mysql":
         db_ins = MysqlDBInstance()
-        db_ins.create_connection()
+        db_ins.create_connection(schema)
         state, query, time, columns, results = db_ins.run_query(query)
         db_ins.close_connection()
         response = {
@@ -56,7 +59,7 @@ def query_parse():
         return jsonify(response)
     elif database == "redshift":
         db_ins = RedshiftDBInstance()
-        db_ins.create_connection()
+        db_ins.create_connection(schema)
         state, query, time, columns, results = db_ins.run_query(query)
         db_ins.close_connection()
         response = {
