@@ -29,3 +29,265 @@
 2022-03-16 15:56:05.208 | INFO     | utils.db_connector:close_connection:139 - Redshift - Successfully closed the connection
 2022-03-16 15:56:23.402 | INFO     | utils.db_connector:create_connection:127 - Redshift - Cursor successfully created
 2022-03-16 15:56:23.520 | DEBUG    | utils.db_connector:run_query:159 - Redshift - Executed: select * from category
+2022-03-18 23:45:29.649 | INFO     | utils.db_connector:create_connection:133 - Redshift - Cursor successfully created
+2022-03-18 23:46:30.920 | INFO     | utils.db_connector:create_connection:40 - Mysql - Successfully connected to database:8.0.27
+2022-03-18 23:46:30.959 | INFO     | utils.db_connector:create_connection:42 - Mysql - Cursor successfully created
+2022-03-18 23:46:30.978 | DEBUG    | utils.db_connector:run_query:72 - Mysql - Executed: 
+2022-03-18 23:47:42.326 | INFO     | utils.db_connector:create_connection:40 - Mysql - Successfully connected to database:8.0.27
+2022-03-18 23:47:42.364 | INFO     | utils.db_connector:create_connection:42 - Mysql - Cursor successfully created
+2022-03-18 23:47:42.411 | DEBUG    | utils.db_connector:run_query:72 - Mysql - Executed: select * from aisles
+2022-03-18 23:47:42.439 | INFO     | utils.db_connector:close_connection:53 - Mysql - Successfully closed the connection
+2022-03-18 23:48:02.850 | INFO     | utils.db_connector:create_connection:40 - Mysql - Successfully connected to database:8.0.27
+2022-03-18 23:48:02.888 | INFO     | utils.db_connector:create_connection:42 - Mysql - Cursor successfully created
+2022-03-18 23:48:02.932 | DEBUG    | utils.db_connector:run_query:72 - Mysql - Executed: select * from aisles;
+2022-03-18 23:48:02.959 | INFO     | utils.db_connector:close_connection:53 - Mysql - Successfully closed the connection
+2022-03-18 23:48:15.302 | INFO     | utils.db_connector:create_connection:40 - Mysql - Successfully connected to database:8.0.27
+2022-03-18 23:48:15.340 | INFO     | utils.db_connector:create_connection:42 - Mysql - Cursor successfully created
+2022-03-18 23:48:15.411 | ERROR    | utils.db_connector:run_query:95 - Mysql - Error while executing query: select * from aisles; Error info: {'error_no': 1146, 'error_msg': "Table 'abcretail.aisles' doesn't exist", 'sqlstate': '42S02'}
+2022-03-18 23:48:15.431 | INFO     | utils.db_connector:close_connection:53 - Mysql - Successfully closed the connection
+2022-03-18 23:48:18.477 | INFO     | utils.db_connector:create_connection:40 - Mysql - Successfully connected to database:8.0.27
+2022-03-18 23:48:18.519 | INFO     | utils.db_connector:create_connection:42 - Mysql - Cursor successfully created
+2022-03-18 23:48:18.555 | ERROR    | utils.db_connector:run_query:95 - Mysql - Error while executing query: select * from aisles; Error info: {'error_no': 1146, 'error_msg': "Table 'abcretail.aisles' doesn't exist", 'sqlstate': '42S02'}
+2022-03-18 23:48:18.573 | INFO     | utils.db_connector:close_connection:53 - Mysql - Successfully closed the connection
+2022-03-18 23:49:22.071 | INFO     | utils.db_connector:create_connection:40 - Mysql - Successfully connected to database:8.0.27
+2022-03-18 23:49:22.109 | INFO     | utils.db_connector:create_connection:42 - Mysql - Cursor successfully created
+2022-03-18 23:49:22.148 | DEBUG    | utils.db_connector:run_query:72 - Mysql - Executed: select * from aisles;
+2022-03-18 23:49:22.180 | INFO     | utils.db_connector:close_connection:53 - Mysql - Successfully closed the connection
+2022-03-18 23:49:32.283 | INFO     | utils.db_connector:create_connection:40 - Mysql - Successfully connected to database:8.0.27
+2022-03-18 23:49:32.322 | INFO     | utils.db_connector:create_connection:42 - Mysql - Cursor successfully created
+2022-03-18 23:49:32.358 | DEBUG    | utils.db_connector:run_query:72 - Mysql - Executed: select * from aisles;
+2022-03-18 23:49:32.383 | INFO     | utils.db_connector:close_connection:53 - Mysql - Successfully closed the connection
+2022-03-18 23:49:41.351 | INFO     | utils.db_connector:create_connection:40 - Mysql - Successfully connected to database:8.0.27
+2022-03-18 23:49:41.389 | INFO     | utils.db_connector:create_connection:42 - Mysql - Cursor successfully created
+2022-03-18 23:49:41.429 | DEBUG    | utils.db_connector:run_query:72 - Mysql - Executed: select * from aisles;
+2022-03-18 23:49:41.460 | INFO     | utils.db_connector:close_connection:53 - Mysql - Successfully closed the connection
+2022-03-18 23:52:47.907 | INFO     | utils.db_connector:create_connection:40 - Mysql - Successfully connected to database:8.0.27
+2022-03-18 23:52:47.946 | INFO     | utils.db_connector:create_connection:42 - Mysql - Cursor successfully created
+2022-03-18 23:52:47.985 | DEBUG    | utils.db_connector:run_query:72 - Mysql - Executed: select * from aisles;
+2022-03-18 23:52:48.011 | INFO     | utils.db_connector:close_connection:53 - Mysql - Successfully closed the connection
+2022-03-18 23:54:52.544 | INFO     | utils.db_connector:create_connection:40 - Mysql - Successfully connected to database:8.0.27
+2022-03-18 23:54:52.582 | INFO     | utils.db_connector:create_connection:42 - Mysql - Cursor successfully created
+2022-03-18 23:54:52.621 | DEBUG    | utils.db_connector:run_query:72 - Mysql - Executed: select * from aisles;
+2022-03-18 23:54:52.653 | INFO     | utils.db_connector:close_connection:53 - Mysql - Successfully closed the connection
+2022-03-18 23:55:27.677 | INFO     | utils.db_connector:create_connection:40 - Mysql - Successfully connected to database:8.0.27
+2022-03-18 23:55:27.713 | INFO     | utils.db_connector:create_connection:42 - Mysql - Cursor successfully created
+2022-03-18 23:55:27.803 | DEBUG    | utils.db_connector:run_query:72 - Mysql - Executed: select * from aisles
+2022-03-18 23:55:27.828 | INFO     | utils.db_connector:close_connection:53 - Mysql - Successfully closed the connection
+2022-03-18 23:57:02.789 | INFO     | utils.db_connector:create_connection:40 - Mysql - Successfully connected to database:8.0.27
+2022-03-18 23:57:02.831 | INFO     | utils.db_connector:create_connection:42 - Mysql - Cursor successfully created
+2022-03-18 23:57:02.869 | DEBUG    | utils.db_connector:run_query:72 - Mysql - Executed: select * from aisles;
+2022-03-18 23:57:02.902 | INFO     | utils.db_connector:close_connection:53 - Mysql - Successfully closed the connection
+2022-03-18 23:57:23.868 | INFO     | utils.db_connector:create_connection:40 - Mysql - Successfully connected to database:8.0.27
+2022-03-18 23:57:23.911 | INFO     | utils.db_connector:create_connection:42 - Mysql - Cursor successfully created
+2022-03-18 23:57:23.950 | DEBUG    | utils.db_connector:run_query:72 - Mysql - Executed: select * from aisles;
+2022-03-18 23:57:23.974 | INFO     | utils.db_connector:close_connection:53 - Mysql - Successfully closed the connection
+2022-03-19 14:29:10.185 | INFO     | utils.db_connector:create_connection:133 - Redshift - Cursor successfully created
+2022-03-19 14:29:10.321 | DEBUG    | utils.db_connector:run_query:163 - Redshift - Executed: select * from aisles
+2022-03-19 14:29:10.331 | INFO     | utils.db_connector:close_connection:144 - Redshift - Successfully closed the connection
+2022-03-19 14:29:12.367 | INFO     | utils.db_connector:create_connection:40 - Mysql - Successfully connected to database:8.0.27
+2022-03-19 14:29:12.440 | INFO     | utils.db_connector:create_connection:42 - Mysql - Cursor successfully created
+2022-03-19 14:29:12.521 | DEBUG    | utils.db_connector:run_query:72 - Mysql - Executed: select * from aisles
+2022-03-19 14:29:12.573 | INFO     | utils.db_connector:close_connection:53 - Mysql - Successfully closed the connection
+2022-03-19 14:29:52.882 | INFO     | utils.db_connector:create_connection:133 - Redshift - Cursor successfully created
+2022-03-19 14:29:52.882 | INFO     | utils.db_connector:create_connection:133 - Redshift - Cursor successfully created
+2022-03-19 14:29:53.007 | ERROR    | utils.db_connector:run_query:186 - Redshift - Error while executing query: select * from category Error info: {'error_code': '42P01', 'error_msg': 'relation "category" does not exist'}
+2022-03-19 14:29:53.007 | ERROR    | utils.db_connector:run_query:186 - Redshift - Error while executing query: select * from category Error info: {'error_code': '42P01', 'error_msg': 'relation "category" does not exist'}
+2022-03-19 14:29:53.018 | INFO     | utils.db_connector:close_connection:144 - Redshift - Successfully closed the connection
+2022-03-19 14:29:53.018 | INFO     | utils.db_connector:close_connection:144 - Redshift - Successfully closed the connection
+2022-03-19 14:30:01.520 | INFO     | utils.db_connector:create_connection:133 - Redshift - Cursor successfully created
+2022-03-19 14:30:01.520 | INFO     | utils.db_connector:create_connection:133 - Redshift - Cursor successfully created
+2022-03-19 14:30:01.520 | INFO     | utils.db_connector:create_connection:133 - Redshift - Cursor successfully created
+2022-03-19 14:30:01.634 | ERROR    | utils.db_connector:run_query:186 - Redshift - Error while executing query: select * from category Error info: {'error_code': '42P01', 'error_msg': 'relation "category" does not exist'}
+2022-03-19 14:30:01.634 | ERROR    | utils.db_connector:run_query:186 - Redshift - Error while executing query: select * from category Error info: {'error_code': '42P01', 'error_msg': 'relation "category" does not exist'}
+2022-03-19 14:30:01.634 | ERROR    | utils.db_connector:run_query:186 - Redshift - Error while executing query: select * from category Error info: {'error_code': '42P01', 'error_msg': 'relation "category" does not exist'}
+2022-03-19 14:30:01.645 | INFO     | utils.db_connector:close_connection:144 - Redshift - Successfully closed the connection
+2022-03-19 14:30:01.645 | INFO     | utils.db_connector:close_connection:144 - Redshift - Successfully closed the connection
+2022-03-19 14:30:01.645 | INFO     | utils.db_connector:close_connection:144 - Redshift - Successfully closed the connection
+2022-03-19 14:30:03.735 | INFO     | utils.db_connector:create_connection:133 - Redshift - Cursor successfully created
+2022-03-19 14:30:03.735 | INFO     | utils.db_connector:create_connection:133 - Redshift - Cursor successfully created
+2022-03-19 14:30:03.735 | INFO     | utils.db_connector:create_connection:133 - Redshift - Cursor successfully created
+2022-03-19 14:30:03.735 | INFO     | utils.db_connector:create_connection:133 - Redshift - Cursor successfully created
+2022-03-19 14:30:03.859 | ERROR    | utils.db_connector:run_query:186 - Redshift - Error while executing query: select * from category Error info: {'error_code': '42P01', 'error_msg': 'relation "category" does not exist'}
+2022-03-19 14:30:03.859 | ERROR    | utils.db_connector:run_query:186 - Redshift - Error while executing query: select * from category Error info: {'error_code': '42P01', 'error_msg': 'relation "category" does not exist'}
+2022-03-19 14:30:03.859 | ERROR    | utils.db_connector:run_query:186 - Redshift - Error while executing query: select * from category Error info: {'error_code': '42P01', 'error_msg': 'relation "category" does not exist'}
+2022-03-19 14:30:03.859 | ERROR    | utils.db_connector:run_query:186 - Redshift - Error while executing query: select * from category Error info: {'error_code': '42P01', 'error_msg': 'relation "category" does not exist'}
+2022-03-19 14:30:03.870 | INFO     | utils.db_connector:close_connection:144 - Redshift - Successfully closed the connection
+2022-03-19 14:30:03.870 | INFO     | utils.db_connector:close_connection:144 - Redshift - Successfully closed the connection
+2022-03-19 14:30:03.870 | INFO     | utils.db_connector:close_connection:144 - Redshift - Successfully closed the connection
+2022-03-19 14:30:03.870 | INFO     | utils.db_connector:close_connection:144 - Redshift - Successfully closed the connection
+2022-03-19 14:30:09.344 | INFO     | utils.db_connector:create_connection:40 - Mysql - Successfully connected to database:8.0.27
+2022-03-19 14:30:09.344 | INFO     | utils.db_connector:create_connection:40 - Mysql - Successfully connected to database:8.0.27
+2022-03-19 14:30:09.344 | INFO     | utils.db_connector:create_connection:40 - Mysql - Successfully connected to database:8.0.27
+2022-03-19 14:30:09.344 | INFO     | utils.db_connector:create_connection:40 - Mysql - Successfully connected to database:8.0.27
+2022-03-19 14:30:09.407 | INFO     | utils.db_connector:create_connection:42 - Mysql - Cursor successfully created
+2022-03-19 14:30:09.407 | INFO     | utils.db_connector:create_connection:42 - Mysql - Cursor successfully created
+2022-03-19 14:30:09.407 | INFO     | utils.db_connector:create_connection:42 - Mysql - Cursor successfully created
+2022-03-19 14:30:09.407 | INFO     | utils.db_connector:create_connection:42 - Mysql - Cursor successfully created
+2022-03-19 14:30:09.489 | ERROR    | utils.db_connector:run_query:95 - Mysql - Error while executing query: select * from category Error info: {'error_no': 1146, 'error_msg': "Table 'instacart1.category' doesn't exist", 'sqlstate': '42S02'}
+2022-03-19 14:30:09.489 | ERROR    | utils.db_connector:run_query:95 - Mysql - Error while executing query: select * from category Error info: {'error_no': 1146, 'error_msg': "Table 'instacart1.category' doesn't exist", 'sqlstate': '42S02'}
+2022-03-19 14:30:09.489 | ERROR    | utils.db_connector:run_query:95 - Mysql - Error while executing query: select * from category Error info: {'error_no': 1146, 'error_msg': "Table 'instacart1.category' doesn't exist", 'sqlstate': '42S02'}
+2022-03-19 14:30:09.489 | ERROR    | utils.db_connector:run_query:95 - Mysql - Error while executing query: select * from category Error info: {'error_no': 1146, 'error_msg': "Table 'instacart1.category' doesn't exist", 'sqlstate': '42S02'}
+2022-03-19 14:30:09.524 | INFO     | utils.db_connector:close_connection:53 - Mysql - Successfully closed the connection
+2022-03-19 14:30:09.524 | INFO     | utils.db_connector:close_connection:53 - Mysql - Successfully closed the connection
+2022-03-19 14:30:09.524 | INFO     | utils.db_connector:close_connection:53 - Mysql - Successfully closed the connection
+2022-03-19 14:30:09.524 | INFO     | utils.db_connector:close_connection:53 - Mysql - Successfully closed the connection
+2022-03-19 14:30:13.748 | INFO     | utils.db_connector:create_connection:40 - Mysql - Successfully connected to database:8.0.27
+2022-03-19 14:30:13.748 | INFO     | utils.db_connector:create_connection:40 - Mysql - Successfully connected to database:8.0.27
+2022-03-19 14:30:13.748 | INFO     | utils.db_connector:create_connection:40 - Mysql - Successfully connected to database:8.0.27
+2022-03-19 14:30:13.748 | INFO     | utils.db_connector:create_connection:40 - Mysql - Successfully connected to database:8.0.27
+2022-03-19 14:30:13.814 | INFO     | utils.db_connector:create_connection:42 - Mysql - Cursor successfully created
+2022-03-19 14:30:13.814 | INFO     | utils.db_connector:create_connection:42 - Mysql - Cursor successfully created
+2022-03-19 14:30:13.814 | INFO     | utils.db_connector:create_connection:42 - Mysql - Cursor successfully created
+2022-03-19 14:30:13.814 | INFO     | utils.db_connector:create_connection:42 - Mysql - Cursor successfully created
+2022-03-19 14:30:13.882 | DEBUG    | utils.db_connector:run_query:72 - Mysql - Executed: select * from aisles
+2022-03-19 14:30:13.882 | DEBUG    | utils.db_connector:run_query:72 - Mysql - Executed: select * from aisles
+2022-03-19 14:30:13.882 | DEBUG    | utils.db_connector:run_query:72 - Mysql - Executed: select * from aisles
+2022-03-19 14:30:13.882 | DEBUG    | utils.db_connector:run_query:72 - Mysql - Executed: select * from aisles
+2022-03-19 14:30:13.929 | INFO     | utils.db_connector:close_connection:53 - Mysql - Successfully closed the connection
+2022-03-19 14:30:13.929 | INFO     | utils.db_connector:close_connection:53 - Mysql - Successfully closed the connection
+2022-03-19 14:30:13.929 | INFO     | utils.db_connector:close_connection:53 - Mysql - Successfully closed the connection
+2022-03-19 14:30:13.929 | INFO     | utils.db_connector:close_connection:53 - Mysql - Successfully closed the connection
+2022-03-19 14:30:51.835 | INFO     | utils.db_connector:create_connection:40 - Mysql - Successfully connected to database:8.0.27
+2022-03-19 14:30:51.835 | INFO     | utils.db_connector:create_connection:40 - Mysql - Successfully connected to database:8.0.27
+2022-03-19 14:30:51.835 | INFO     | utils.db_connector:create_connection:40 - Mysql - Successfully connected to database:8.0.27
+2022-03-19 14:30:51.835 | INFO     | utils.db_connector:create_connection:40 - Mysql - Successfully connected to database:8.0.27
+2022-03-19 14:30:51.902 | INFO     | utils.db_connector:create_connection:42 - Mysql - Cursor successfully created
+2022-03-19 14:30:51.902 | INFO     | utils.db_connector:create_connection:42 - Mysql - Cursor successfully created
+2022-03-19 14:30:51.902 | INFO     | utils.db_connector:create_connection:42 - Mysql - Cursor successfully created
+2022-03-19 14:30:51.902 | INFO     | utils.db_connector:create_connection:42 - Mysql - Cursor successfully created
+2022-03-19 14:30:51.964 | DEBUG    | utils.db_connector:run_query:72 - Mysql - Executed: select * from aisles
+2022-03-19 14:30:51.964 | DEBUG    | utils.db_connector:run_query:72 - Mysql - Executed: select * from aisles
+2022-03-19 14:30:51.964 | DEBUG    | utils.db_connector:run_query:72 - Mysql - Executed: select * from aisles
+2022-03-19 14:30:51.964 | DEBUG    | utils.db_connector:run_query:72 - Mysql - Executed: select * from aisles
+2022-03-19 14:30:52.010 | INFO     | utils.db_connector:close_connection:53 - Mysql - Successfully closed the connection
+2022-03-19 14:30:52.010 | INFO     | utils.db_connector:close_connection:53 - Mysql - Successfully closed the connection
+2022-03-19 14:30:52.010 | INFO     | utils.db_connector:close_connection:53 - Mysql - Successfully closed the connection
+2022-03-19 14:30:52.010 | INFO     | utils.db_connector:close_connection:53 - Mysql - Successfully closed the connection
+2022-03-19 16:36:40.461 | INFO     | utils.db_connector:create_connection:40 - Mysql - Successfully connected to database:8.0.27
+2022-03-19 16:36:40.461 | INFO     | utils.db_connector:create_connection:40 - Mysql - Successfully connected to database:8.0.27
+2022-03-19 16:36:40.461 | INFO     | utils.db_connector:create_connection:40 - Mysql - Successfully connected to database:8.0.27
+2022-03-19 16:36:40.461 | INFO     | utils.db_connector:create_connection:40 - Mysql - Successfully connected to database:8.0.27
+2022-03-19 16:36:40.531 | INFO     | utils.db_connector:create_connection:42 - Mysql - Cursor successfully created
+2022-03-19 16:36:40.531 | INFO     | utils.db_connector:create_connection:42 - Mysql - Cursor successfully created
+2022-03-19 16:36:40.531 | INFO     | utils.db_connector:create_connection:42 - Mysql - Cursor successfully created
+2022-03-19 16:36:40.531 | INFO     | utils.db_connector:create_connection:42 - Mysql - Cursor successfully created
+2022-03-19 16:36:40.604 | DEBUG    | utils.db_connector:run_query:72 - Mysql - Executed: select * from aisles
+2022-03-19 16:36:40.604 | DEBUG    | utils.db_connector:run_query:72 - Mysql - Executed: select * from aisles
+2022-03-19 16:36:40.604 | DEBUG    | utils.db_connector:run_query:72 - Mysql - Executed: select * from aisles
+2022-03-19 16:36:40.604 | DEBUG    | utils.db_connector:run_query:72 - Mysql - Executed: select * from aisles
+2022-03-19 16:36:40.653 | INFO     | utils.db_connector:close_connection:53 - Mysql - Successfully closed the connection
+2022-03-19 16:36:40.653 | INFO     | utils.db_connector:close_connection:53 - Mysql - Successfully closed the connection
+2022-03-19 16:36:40.653 | INFO     | utils.db_connector:close_connection:53 - Mysql - Successfully closed the connection
+2022-03-19 16:36:40.653 | INFO     | utils.db_connector:close_connection:53 - Mysql - Successfully closed the connection
+2022-03-19 16:39:47.440 | INFO     | utils.db_connector:create_connection:40 - Mysql - Successfully connected to database:8.0.27
+2022-03-19 16:39:47.440 | INFO     | utils.db_connector:create_connection:40 - Mysql - Successfully connected to database:8.0.27
+2022-03-19 16:39:47.440 | INFO     | utils.db_connector:create_connection:40 - Mysql - Successfully connected to database:8.0.27
+2022-03-19 16:39:47.440 | INFO     | utils.db_connector:create_connection:40 - Mysql - Successfully connected to database:8.0.27
+2022-03-19 16:39:47.509 | INFO     | utils.db_connector:create_connection:42 - Mysql - Cursor successfully created
+2022-03-19 16:39:47.509 | INFO     | utils.db_connector:create_connection:42 - Mysql - Cursor successfully created
+2022-03-19 16:39:47.509 | INFO     | utils.db_connector:create_connection:42 - Mysql - Cursor successfully created
+2022-03-19 16:39:47.509 | INFO     | utils.db_connector:create_connection:42 - Mysql - Cursor successfully created
+2022-03-19 16:39:47.574 | DEBUG    | utils.db_connector:run_query:72 - Mysql - Executed: select * from aisles
+2022-03-19 16:39:47.574 | DEBUG    | utils.db_connector:run_query:72 - Mysql - Executed: select * from aisles
+2022-03-19 16:39:47.574 | DEBUG    | utils.db_connector:run_query:72 - Mysql - Executed: select * from aisles
+2022-03-19 16:39:47.574 | DEBUG    | utils.db_connector:run_query:72 - Mysql - Executed: select * from aisles
+2022-03-19 16:39:47.618 | INFO     | utils.db_connector:close_connection:53 - Mysql - Successfully closed the connection
+2022-03-19 16:39:47.618 | INFO     | utils.db_connector:close_connection:53 - Mysql - Successfully closed the connection
+2022-03-19 16:39:47.618 | INFO     | utils.db_connector:close_connection:53 - Mysql - Successfully closed the connection
+2022-03-19 16:39:47.618 | INFO     | utils.db_connector:close_connection:53 - Mysql - Successfully closed the connection
+2022-03-19 16:40:10.572 | INFO     | utils.db_connector:create_connection:40 - Mysql - Successfully connected to database:8.0.27
+2022-03-19 16:40:10.572 | INFO     | utils.db_connector:create_connection:40 - Mysql - Successfully connected to database:8.0.27
+2022-03-19 16:40:10.572 | INFO     | utils.db_connector:create_connection:40 - Mysql - Successfully connected to database:8.0.27
+2022-03-19 16:40:10.572 | INFO     | utils.db_connector:create_connection:40 - Mysql - Successfully connected to database:8.0.27
+2022-03-19 16:40:10.639 | INFO     | utils.db_connector:create_connection:42 - Mysql - Cursor successfully created
+2022-03-19 16:40:10.639 | INFO     | utils.db_connector:create_connection:42 - Mysql - Cursor successfully created
+2022-03-19 16:40:10.639 | INFO     | utils.db_connector:create_connection:42 - Mysql - Cursor successfully created
+2022-03-19 16:40:10.639 | INFO     | utils.db_connector:create_connection:42 - Mysql - Cursor successfully created
+2022-03-19 16:40:10.699 | DEBUG    | utils.db_connector:run_query:72 - Mysql - Executed: select * from aisles
+2022-03-19 16:40:10.699 | DEBUG    | utils.db_connector:run_query:72 - Mysql - Executed: select * from aisles
+2022-03-19 16:40:10.699 | DEBUG    | utils.db_connector:run_query:72 - Mysql - Executed: select * from aisles
+2022-03-19 16:40:10.699 | DEBUG    | utils.db_connector:run_query:72 - Mysql - Executed: select * from aisles
+2022-03-19 16:40:10.736 | INFO     | utils.db_connector:close_connection:53 - Mysql - Successfully closed the connection
+2022-03-19 16:40:10.736 | INFO     | utils.db_connector:close_connection:53 - Mysql - Successfully closed the connection
+2022-03-19 16:40:10.736 | INFO     | utils.db_connector:close_connection:53 - Mysql - Successfully closed the connection
+2022-03-19 16:40:10.736 | INFO     | utils.db_connector:close_connection:53 - Mysql - Successfully closed the connection
+2022-03-19 16:40:25.485 | INFO     | utils.db_connector:create_connection:40 - Mysql - Successfully connected to database:8.0.27
+2022-03-19 16:40:25.485 | INFO     | utils.db_connector:create_connection:40 - Mysql - Successfully connected to database:8.0.27
+2022-03-19 16:40:25.485 | INFO     | utils.db_connector:create_connection:40 - Mysql - Successfully connected to database:8.0.27
+2022-03-19 16:40:25.485 | INFO     | utils.db_connector:create_connection:40 - Mysql - Successfully connected to database:8.0.27
+2022-03-19 16:40:25.573 | INFO     | utils.db_connector:create_connection:42 - Mysql - Cursor successfully created
+2022-03-19 16:40:25.573 | INFO     | utils.db_connector:create_connection:42 - Mysql - Cursor successfully created
+2022-03-19 16:40:25.573 | INFO     | utils.db_connector:create_connection:42 - Mysql - Cursor successfully created
+2022-03-19 16:40:25.573 | INFO     | utils.db_connector:create_connection:42 - Mysql - Cursor successfully created
+2022-03-19 16:40:25.648 | DEBUG    | utils.db_connector:run_query:72 - Mysql - Executed: select * from aisles
+2022-03-19 16:40:25.648 | DEBUG    | utils.db_connector:run_query:72 - Mysql - Executed: select * from aisles
+2022-03-19 16:40:25.648 | DEBUG    | utils.db_connector:run_query:72 - Mysql - Executed: select * from aisles
+2022-03-19 16:40:25.648 | DEBUG    | utils.db_connector:run_query:72 - Mysql - Executed: select * from aisles
+2022-03-19 16:40:25.692 | INFO     | utils.db_connector:close_connection:53 - Mysql - Successfully closed the connection
+2022-03-19 16:40:25.692 | INFO     | utils.db_connector:close_connection:53 - Mysql - Successfully closed the connection
+2022-03-19 16:40:25.692 | INFO     | utils.db_connector:close_connection:53 - Mysql - Successfully closed the connection
+2022-03-19 16:40:25.692 | INFO     | utils.db_connector:close_connection:53 - Mysql - Successfully closed the connection
+2022-03-19 16:40:28.721 | INFO     | utils.db_connector:create_connection:40 - Mysql - Successfully connected to database:8.0.27
+2022-03-19 16:40:28.721 | INFO     | utils.db_connector:create_connection:40 - Mysql - Successfully connected to database:8.0.27
+2022-03-19 16:40:28.721 | INFO     | utils.db_connector:create_connection:40 - Mysql - Successfully connected to database:8.0.27
+2022-03-19 16:40:28.721 | INFO     | utils.db_connector:create_connection:40 - Mysql - Successfully connected to database:8.0.27
+2022-03-19 16:40:28.810 | INFO     | utils.db_connector:create_connection:42 - Mysql - Cursor successfully created
+2022-03-19 16:40:28.810 | INFO     | utils.db_connector:create_connection:42 - Mysql - Cursor successfully created
+2022-03-19 16:40:28.810 | INFO     | utils.db_connector:create_connection:42 - Mysql - Cursor successfully created
+2022-03-19 16:40:28.810 | INFO     | utils.db_connector:create_connection:42 - Mysql - Cursor successfully created
+2022-03-19 16:40:28.890 | DEBUG    | utils.db_connector:run_query:72 - Mysql - Executed: select * from aisles
+2022-03-19 16:40:28.890 | DEBUG    | utils.db_connector:run_query:72 - Mysql - Executed: select * from aisles
+2022-03-19 16:40:28.890 | DEBUG    | utils.db_connector:run_query:72 - Mysql - Executed: select * from aisles
+2022-03-19 16:40:28.890 | DEBUG    | utils.db_connector:run_query:72 - Mysql - Executed: select * from aisles
+2022-03-19 16:40:28.939 | INFO     | utils.db_connector:close_connection:53 - Mysql - Successfully closed the connection
+2022-03-19 16:40:28.939 | INFO     | utils.db_connector:close_connection:53 - Mysql - Successfully closed the connection
+2022-03-19 16:40:28.939 | INFO     | utils.db_connector:close_connection:53 - Mysql - Successfully closed the connection
+2022-03-19 16:40:28.939 | INFO     | utils.db_connector:close_connection:53 - Mysql - Successfully closed the connection
+2022-03-19 16:41:01.299 | INFO     | utils.db_connector:create_connection:40 - Mysql - Successfully connected to database:8.0.27
+2022-03-19 16:41:01.299 | INFO     | utils.db_connector:create_connection:40 - Mysql - Successfully connected to database:8.0.27
+2022-03-19 16:41:01.299 | INFO     | utils.db_connector:create_connection:40 - Mysql - Successfully connected to database:8.0.27
+2022-03-19 16:41:01.299 | INFO     | utils.db_connector:create_connection:40 - Mysql - Successfully connected to database:8.0.27
+2022-03-19 16:41:01.395 | INFO     | utils.db_connector:create_connection:42 - Mysql - Cursor successfully created
+2022-03-19 16:41:01.395 | INFO     | utils.db_connector:create_connection:42 - Mysql - Cursor successfully created
+2022-03-19 16:41:01.395 | INFO     | utils.db_connector:create_connection:42 - Mysql - Cursor successfully created
+2022-03-19 16:41:01.395 | INFO     | utils.db_connector:create_connection:42 - Mysql - Cursor successfully created
+2022-03-19 16:41:01.485 | DEBUG    | utils.db_connector:run_query:72 - Mysql - Executed: select * from aisles
+2022-03-19 16:41:01.485 | DEBUG    | utils.db_connector:run_query:72 - Mysql - Executed: select * from aisles
+2022-03-19 16:41:01.485 | DEBUG    | utils.db_connector:run_query:72 - Mysql - Executed: select * from aisles
+2022-03-19 16:41:01.485 | DEBUG    | utils.db_connector:run_query:72 - Mysql - Executed: select * from aisles
+2022-03-19 16:41:01.537 | INFO     | utils.db_connector:close_connection:53 - Mysql - Successfully closed the connection
+2022-03-19 16:41:01.537 | INFO     | utils.db_connector:close_connection:53 - Mysql - Successfully closed the connection
+2022-03-19 16:41:01.537 | INFO     | utils.db_connector:close_connection:53 - Mysql - Successfully closed the connection
+2022-03-19 16:41:01.537 | INFO     | utils.db_connector:close_connection:53 - Mysql - Successfully closed the connection
+2022-03-19 17:00:40.908 | INFO     | utils.db_connector:create_connection:40 - Mysql - Successfully connected to database:8.0.27
+2022-03-19 17:00:40.908 | INFO     | utils.db_connector:create_connection:40 - Mysql - Successfully connected to database:8.0.27
+2022-03-19 17:00:40.908 | INFO     | utils.db_connector:create_connection:40 - Mysql - Successfully connected to database:8.0.27
+2022-03-19 17:00:40.908 | INFO     | utils.db_connector:create_connection:40 - Mysql - Successfully connected to database:8.0.27
+2022-03-19 17:00:40.975 | INFO     | utils.db_connector:create_connection:42 - Mysql - Cursor successfully created
+2022-03-19 17:00:40.975 | INFO     | utils.db_connector:create_connection:42 - Mysql - Cursor successfully created
+2022-03-19 17:00:40.975 | INFO     | utils.db_connector:create_connection:42 - Mysql - Cursor successfully created
+2022-03-19 17:00:40.975 | INFO     | utils.db_connector:create_connection:42 - Mysql - Cursor successfully created
+2022-03-19 17:00:41.076 | ERROR    | utils.db_connector:run_query:95 - Mysql - Error while executing query: select * from aisles Error info: {'error_no': 1146, 'error_msg': "Table 'abcretail.aisles' doesn't exist", 'sqlstate': '42S02'}
+2022-03-19 17:00:41.076 | ERROR    | utils.db_connector:run_query:95 - Mysql - Error while executing query: select * from aisles Error info: {'error_no': 1146, 'error_msg': "Table 'abcretail.aisles' doesn't exist", 'sqlstate': '42S02'}
+2022-03-19 17:00:41.076 | ERROR    | utils.db_connector:run_query:95 - Mysql - Error while executing query: select * from aisles Error info: {'error_no': 1146, 'error_msg': "Table 'abcretail.aisles' doesn't exist", 'sqlstate': '42S02'}
+2022-03-19 17:00:41.076 | ERROR    | utils.db_connector:run_query:95 - Mysql - Error while executing query: select * from aisles Error info: {'error_no': 1146, 'error_msg': "Table 'abcretail.aisles' doesn't exist", 'sqlstate': '42S02'}
+2022-03-19 17:00:41.119 | INFO     | utils.db_connector:close_connection:53 - Mysql - Successfully closed the connection
+2022-03-19 17:00:41.119 | INFO     | utils.db_connector:close_connection:53 - Mysql - Successfully closed the connection
+2022-03-19 17:00:41.119 | INFO     | utils.db_connector:close_connection:53 - Mysql - Successfully closed the connection
+2022-03-19 17:00:41.119 | INFO     | utils.db_connector:close_connection:53 - Mysql - Successfully closed the connection
+2022-03-19 17:01:31.019 | INFO     | utils.db_connector:create_connection:40 - Mysql - Successfully connected to database:8.0.27
+2022-03-19 17:01:31.019 | INFO     | utils.db_connector:create_connection:40 - Mysql - Successfully connected to database:8.0.27
+2022-03-19 17:01:31.019 | INFO     | utils.db_connector:create_connection:40 - Mysql - Successfully connected to database:8.0.27
+2022-03-19 17:01:31.019 | INFO     | utils.db_connector:create_connection:40 - Mysql - Successfully connected to database:8.0.27
+2022-03-19 17:01:31.096 | INFO     | utils.db_connector:create_connection:42 - Mysql - Cursor successfully created
+2022-03-19 17:01:31.096 | INFO     | utils.db_connector:create_connection:42 - Mysql - Cursor successfully created
+2022-03-19 17:01:31.096 | INFO     | utils.db_connector:create_connection:42 - Mysql - Cursor successfully created
+2022-03-19 17:01:31.096 | INFO     | utils.db_connector:create_connection:42 - Mysql - Cursor successfully created
+2022-03-19 17:01:31.177 | DEBUG    | utils.db_connector:run_query:72 - Mysql - Executed: select * from aisles
+2022-03-19 17:01:31.177 | DEBUG    | utils.db_connector:run_query:72 - Mysql - Executed: select * from aisles
+2022-03-19 17:01:31.177 | DEBUG    | utils.db_connector:run_query:72 - Mysql - Executed: select * from aisles
+2022-03-19 17:01:31.177 | DEBUG    | utils.db_connector:run_query:72 - Mysql - Executed: select * from aisles
+2022-03-19 17:01:31.226 | INFO     | utils.db_connector:close_connection:53 - Mysql - Successfully closed the connection
+2022-03-19 17:01:31.226 | INFO     | utils.db_connector:close_connection:53 - Mysql - Successfully closed the connection
+2022-03-19 17:01:31.226 | INFO     | utils.db_connector:close_connection:53 - Mysql - Successfully closed the connection
+2022-03-19 17:01:31.226 | INFO     | utils.db_connector:close_connection:53 - Mysql - Successfully closed the connection
