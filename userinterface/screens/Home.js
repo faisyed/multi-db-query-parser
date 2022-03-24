@@ -4,6 +4,7 @@ import { RadioGroup } from 'react-native-radio-buttons-group';
 import { Button } from 'react-native';
 import { parseQuery } from '../api';
 import ResultTable from './Table';
+import ErrorComponent from './ErrorComponent';
 
 const databases = [
   {
@@ -45,13 +46,15 @@ const MultiTextInput = (props) => {
 
 const Home = ({ navigation }) => {
   const [query, onChangeQuery] = React.useState('');
-  const [databaseSelected, setDatabase] = React.useState('');
+  const [databaseSelected, setDatabase] = React.useState(databases);
   const [radioButtons, setRadioButtons] = React.useState(databases);
-  const [selectedSchema, setSchema] = React.useState('');
+  const [selectedSchema, setSchema] = React.useState(schemas);
   const [columns, setColumns] = React.useState(undefined);
   const [tableData, setTableData] = React.useState(undefined);
   const [showTable, setShowTable] = React.useState(false);
   const [timeToExecute, setTime] = React.useState('');
+  const [showError, setErrorStatus] = React.useState(false);
+  const [errorMsg, setErrorMsg] = React.useState({'error_msg': undefined, 'error_no': undefined, 'sqlstate': undefined})
 
   function onPressRadioButton(radioButtonsArray){
     setRadioButtons(radioButtonsArray);
@@ -59,14 +62,23 @@ const Home = ({ navigation }) => {
 
   const executeQuery = () => {
     setShowTable(false);
+    setErrorStatus(false);
     let databaseType = databaseSelected[0]['selected'] ? databaseSelected[0]['value']: databaseSelected[1]['value'];
     let schemaType = selectedSchema[0]['selected'] ? selectedSchema[0]['value']: selectedSchema[1]['value'];
 
     parseQuery(databaseType, schemaType, query).then((response) => {
-      setColumns(response.data.columns);
-      setTableData(response.data.results);
-      setTime(response.data.time);
-      setShowTable(true);
+      if(response.data.columns == null){
+        setErrorMsg(response.data.results);
+        setErrorStatus(true);
+      }
+      else{
+        console.log("res.",response.data);
+        setColumns(response.data.columns);
+        setTableData(response.data.results);
+        setTime(response.data.time);
+        setShowTable(true);
+      }
+
     });
   };
 
@@ -115,6 +127,7 @@ const Home = ({ navigation }) => {
         </View>
       {showTable && <Text>Query executed in {timeToExecute}</Text>}
       {showTable && <ResultTable headers={columns} data={tableData}/>}
+      {showError && <ErrorComponent errorData = {errorMsg}/>}
     </View>
   );
 };
