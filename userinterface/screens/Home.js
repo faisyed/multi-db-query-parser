@@ -9,7 +9,8 @@ const databases = [
   {
     id: '1',
     label: 'MySQL',
-    value: 'mysql'
+    value: 'mysql',
+    selected: true
   },
   {
     id: '2',
@@ -22,7 +23,8 @@ const schemas = [
   {
     id: '1',
     label: 'Instacart',
-    value: 'instacart'
+    value: 'instacart',
+    selected: true
   },
   {
     id: '2',
@@ -71,10 +73,9 @@ const Home = ({ navigation }) => {
   
   return (
     <View style={styles.container} keyboardShouldPersistTaps='never'>
-      <Text style={{paddingBottom:20, fontWeight: 'bold'}}>Enter Query in below text area:</Text>
       <View style={styles.body}>
         <View style={styles.radioGroup}>
-          <Text>Please select the database: </Text>
+          <Text>Select database: </Text>
           <View style={styles.radioBut}>
             <RadioGroup
               radioButtons={databases}
@@ -85,7 +86,7 @@ const Home = ({ navigation }) => {
           </View>
         </View>
         <View>
-          <Text>Please select the schema: </Text>
+          <Text>Choose schema: </Text>
           <View style={styles.radioBut}>
             <RadioGroup
               radioButtons={schemas}
@@ -98,17 +99,19 @@ const Home = ({ navigation }) => {
         <View style={styles.textBox}  keyboardShouldPersistTaps='never'>
           <MultiTextInput
             multiline
-            numberOfLines={10}
-            placeholder={'select * from table;'}
+            numberOfLines={4}
+            placeholder={'Enter your query here!!!'}
             onChangeText = {(text) => onChangeQuery(text)}
             value={query}
             style={{padding:'2%', width: '98%', borderWidth:2}}
           />
         </View>
-        <Button
-          title='Execute'
-          onPress={executeQuery}
-        />
+        <View style={styles.button}>
+          <Button
+            title='Execute'
+            onPress={executeQuery}
+          />
+        </View>
         </View>
       {showTable && <Text>Query executed in {timeToExecute}</Text>}
       {showTable && <ResultTable headers={columns} data={tableData}/>}
@@ -126,7 +129,8 @@ const styles = StyleSheet.create({
     width: '100%',
     display: 'flex',
     flexDirection: 'column',
-    justifyContent: 'flex-start'
+    justifyContent: 'flex-start',
+    paddingTop: 10
   },
   radioGroup:{
     display: 'flex',
@@ -144,6 +148,14 @@ const styles = StyleSheet.create({
   tableHeader:{
     // width: '25%'
   },
+  textBox:{
+    padding: 5
+  },
+  button:{
+    textAlign:'center',
+    marginLeft:140,
+    width:100
+  }
 });
 
 export default Home;
