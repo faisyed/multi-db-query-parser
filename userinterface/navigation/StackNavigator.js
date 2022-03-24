@@ -13,9 +13,15 @@ const StackNavigator = () => {
         name="Home"
         component={DrawerNavigator}
         options={{
-          title: 'Query Parser',
+          title: 'SQLChats',
           headerStyle: {
             backgroundColor: '#FFC300',
+          },
+          headerTitleStyle: {
+            fontWeight: 'bold',
+            alignSelf: 'center',
+            height: 40,
+            fontSize: 25
           },
         }}
       />
