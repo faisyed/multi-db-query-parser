@@ -5,8 +5,12 @@ This script serves as the backend endpoint for various api's being used in the a
 from flask import Flask, request, jsonify, send_file
 from utils.db_connector import MysqlDBInstance, RedshiftDBInstance
 from utils.autocomplete import MysqlAutoComplete, RedshiftAutoComplete
+from flask_cors import CORS
 
 app = Flask(__name__)
+
+# establishing cross origins
+CORS(app)
 
 
 @app.route('/suggest', methods=["GET"])
