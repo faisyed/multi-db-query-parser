@@ -2,8 +2,6 @@ import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 import DrawerNavigator from './DrawerNavigator'
 import Home from '../screens/Home';
-import Messages from '../screens/Messages';
-import Profile from '../screens/Profile';
 const Stack = createStackNavigator();
 
 const StackNavigator = () => {
@@ -25,8 +23,6 @@ const StackNavigator = () => {
           },
         }}
       />
-      <Stack.Screen name="Messages" component={Messages} />
-      <Stack.Screen name="Profile" component={Profile} />
     </Stack.Navigator>
   );
 };

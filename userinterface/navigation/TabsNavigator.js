@@ -2,8 +2,6 @@ import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import StackNavigator from './StackNavigator'
 import Home from '../screens/Home';
-import Messages from '../screens/Messages';
-import Profile from '../screens/Profile';
 
 const Tabs = createBottomTabNavigator();
 
