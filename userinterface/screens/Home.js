@@ -87,7 +87,7 @@ const Home = ({ navigation }) => {
     <View style={styles.container} keyboardShouldPersistTaps='never'>
       <View style={styles.body}>
         <View style={styles.radioGroup}>
-          <Text>Select database: </Text>
+          <Text style={{paddingLeft:'2%'}}>Select database: </Text>
           <View style={styles.radioBut}>
             <RadioGroup
               radioButtons={databases}
@@ -98,7 +98,7 @@ const Home = ({ navigation }) => {
           </View>
         </View>
         <View>
-          <Text>Choose schema: </Text>
+          <Text style={{paddingLeft:'2%'}}>Choose schema: </Text>
           <View style={styles.radioBut}>
             <RadioGroup
               radioButtons={schemas}
