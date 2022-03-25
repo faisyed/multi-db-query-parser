@@ -7,7 +7,7 @@ import redshift_connector
 import config
 from loguru import logger
 from time import time
-from utils.commons import json_map_generator
+from utils.commons import json_map_generator, column_parser
 
 
 class MysqlDBInstance:
@@ -19,7 +19,7 @@ class MysqlDBInstance:
     def __init__(self):
         self.connection = None
         self.cursor = None
-        logger.add("logs/database_logs/mysql.log", level="DEBUG")
+        #logger.add("logs/database_logs/mysql.log", level="DEBUG")
 
     # this method is used to create a connection to the mysql database
     def create_connection(self, schema):
@@ -37,12 +37,12 @@ class MysqlDBInstance:
             )
             if self.connection and self.connection.is_connected():
                 db_info = self.connection.get_server_info()
-                logger.info("Mysql - Successfully connected to database:" + db_info)
+                #logger.info("Mysql - Successfully connected to database:" + db_info)
                 self.cursor = self.connection.cursor()
-                logger.info("Mysql - Cursor successfully created")
+                #logger.info("Mysql - Cursor successfully created")
         except mysql.connector.Error as err:
             error_map = {"error_no": err.errno, "error_msg": err.msg, "sqlstate": err.sqlstate}
-            logger.error("Mysql - Error during connection to database: " + str(error_map))
+           #logger.error("Mysql - Error during connection to database: " + str(error_map))
 
     # this method is used to close a connection to the mysql database
     def close_connection(self):
@@ -50,10 +50,10 @@ class MysqlDBInstance:
             if self.connection and self.connection.is_connected():
                 self.cursor.close()
                 self.connection.close()
-                logger.info("Mysql - Successfully closed the connection")
+                #logger.info("Mysql - Successfully closed the connection")
         except mysql.connector.Error as err:
             error_map = {"error_no": err.errno, "error_msg": err.msg, "sqlstate": err.sqlstate}
-            logger.error("Mysql - Error during closing the database connection: " + str(error_map))
+            #logger.error("Mysql - Error during closing the database connection: " + str(error_map))
 
     # this method is used to execute a query in the mysql database
     def run_query(self, query):
@@ -92,7 +92,7 @@ class MysqlDBInstance:
 
         except mysql.connector.Error as err:
             error_map = {"error_no": err.errno, "error_msg": err.msg, "sqlstate": err.sqlstate}
-            logger.error("Mysql - Error while executing query: " + query + " Error info: "+ str(error_map))
+            #logger.error("Mysql - Error while executing query: " + query + " Error info: "+ str(error_map))
             return "failure", query, query_time, None, error_map
 
     # this method is used to commit the changes to the mysql database
@@ -100,10 +100,10 @@ class MysqlDBInstance:
         try:
             if self.connection and self.connection.is_connected():
                 self.connection.commit()
-                logger.info("Mysql - Committed the changes successfully")
+                #logger.info("Mysql - Committed the changes successfully")
         except mysql.connector.Error as err:
             error_map = {"error_no": err.errno, "error_msg": err.msg, "sqlstate": err.sqlstate}
-            logger.error("Mysql - Error while committing changes: " + " Error info: " + str(error_map))
+            #logger.error("Mysql - Error while committing changes: " + " Error info: " + str(error_map))
 
 
 class RedshiftDBInstance:
@@ -115,7 +115,7 @@ class RedshiftDBInstance:
     def __init__(self):
         self.connection = None
         self.cursor = None
-        logger.add("logs/database_logs/redshift.log", level="DEBUG")
+        #logger.add("logs/database_logs/redshift.log", level="DEBUG")
 
     # this method is used to create a connection to the redshift database
     def create_connection(self, schema):
@@ -130,10 +130,10 @@ class RedshiftDBInstance:
             )
             if self.connection:
                 self.cursor = self.connection.cursor()
-                logger.info("Redshift - Cursor successfully created")
+                #logger.info("Redshift - Cursor successfully created")
         except redshift_connector.Error as err:
             error_map = {"error_code": err.args[0]["C"], "error_msg": err.args[0]["M"]}
-            logger.error("Redshift - Error during connection to database: " + str(error_map))
+            #logger.error("Redshift - Error during connection to database: " + str(error_map))
 
     # this method is used to close a connection to the redshift database
     def close_connection(self):
@@ -141,10 +141,10 @@ class RedshiftDBInstance:
             if self.cursor:
                 self.cursor.close()
                 self.connection.close()
-                logger.info("Redshift - Successfully closed the connection")
+                #logger.info("Redshift - Successfully closed the connection")
         except redshift_connector.Error as err:
             error_map = {"error_code": err.args[0]["C"], "error_msg": err.args[0]["M"]}
-            logger.error("Redshift - Error during closing the database connection: " + str(error_map))
+            #logger.error("Redshift - Error during closing the database connection: " + str(error_map))
 
     # this method is used to execute a query in the redshift database
     def run_query(self, query):
@@ -160,7 +160,7 @@ class RedshiftDBInstance:
                 self.cursor.execute(query)
                 end_time = int(round(time() * 1000))
 
-                logger.debug("Redshift - Executed: " + query)
+                #logger.debug("Redshift - Executed: " + query)
 
                 query_time = str(end_time - start_time) + " ms"
 
@@ -168,7 +168,9 @@ class RedshiftDBInstance:
                 info = self.cursor.description
                 columns = []
                 for ind in range(len(info)):
-                    columns.append(info[ind][0])
+                    temp_column = info[ind][0]
+                    temp_column = column_parser(temp_column)
+                    columns.append(temp_column)
 
                 # storing the results from the query
                 results = []
@@ -183,7 +185,7 @@ class RedshiftDBInstance:
 
         except redshift_connector.Error as err:
             error_map = {"error_code": err.args[0]["C"], "error_msg": err.args[0]["M"]}
-            logger.error("Redshift - Error while executing query: " + query + " Error info: " + str(error_map))
+            #logger.error("Redshift - Error while executing query: " + query + " Error info: " + str(error_map))
             return "failure", query, query_time, None, error_map
 
     # this method is used to commit the changes to the redshift database
@@ -191,7 +193,7 @@ class RedshiftDBInstance:
         try:
             if self.connection and self.connection.is_connected():
                 self.connection.commit()
-                logger.info("Redshift - Committed the changes successfully")
+                #logger.info("Redshift - Committed the changes successfully")
         except redshift_connector.Error as err:
             error_map = {"error_code": err.args[0]["C"], "error_msg": err.args[0]["M"]}
-            logger.error("Redshift - Error while committing changes: " + " Error info: " + str(error_map))
+            #logger.error("Redshift - Error while committing changes: " + " Error info: " + str(error_map))

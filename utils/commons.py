@@ -14,3 +14,9 @@ def json_map_generator(columns, data):
         else:
             json_map[column] = value
     return json_map
+
+
+def column_parser(column):
+    if str(column).startswith('b'):
+        column = str(column)[2:len(str(column))-1]
+    return column

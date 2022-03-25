@@ -43,7 +43,7 @@ def query_parse():
     database = database.lower()
 
     query = request.args.get("query")
-    query = query.lower()
+    query = query
 
     schema = request.args.get("schema")
     schema = schema.lower()
