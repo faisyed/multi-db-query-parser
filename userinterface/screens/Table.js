@@ -20,10 +20,9 @@ export default class ResultTable extends Component {
     let tableData = [];
     for(let i = 0; i < this.props.data.length; i++){
         let row = [];
-
-        row.push(this.props.data[i][this.state.tableHead[0]]);
-        row.push(this.props.data[i][this.state.tableHead[1]]);
-        row.push(this.props.data[i][this.state.tableHead[2]]);
+        for(let j = 0; j < this.state.tableHead.length; j++){
+            row.push(this.props.data[i][this.state.tableHead[j]]);
+        }
         tableData.push(row);
     }
 

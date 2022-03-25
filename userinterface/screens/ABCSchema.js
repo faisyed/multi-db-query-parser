@@ -5,7 +5,7 @@ import ResultTable from './Table';
 const ABCSchema = () => {
 
   const products = {
-    'name': 'PRODUCTS',
+    'name': 'products',
     'columns': ['Field', 'Type', 'Null', 'Key', 'Default', 'Extra'],
     'results': [
       {
@@ -29,7 +29,7 @@ const ABCSchema = () => {
 
 
   const orders = {
-    'name': 'ORDERS',
+    'name': 'orders',
     'columns': ['Field', 'Type', 'Null', 'Key', 'Default', 'Extra'],
     'results': [
       {
@@ -108,7 +108,7 @@ const ABCSchema = () => {
   };
 
   const orders_products = {
-    'name': 'ORDER_PRODUCTS',
+    'name': 'order_products',
     'columns': ['Field', 'Type', 'Null', 'Key', 'Default', 'Extra'],
     'results': [{
       'Field': 'OrderID',
@@ -142,19 +142,19 @@ const ABCSchema = () => {
   };
 
   const employees = {
-    'name': 'EMPLOYEES',
+    'name': 'employees',
     'columns': ['Field', 'Type', 'Null', 'Key', 'Default', 'Extra'],
     'results': [{'Field': 'EMPLOYEE_ID', 'Type': 'bigint unsigned', 'Null': 'NO', 'Key': 'PRI', 'Default': '0', 'Extra': ''}, {'Field': 'Employee_LastName', 'Type': 'varchar(1000)', 'Null': 'YES', 'Key': '', 'Default': 'None', 'Extra': ''}, {'Field': 'Employee_FirstName', 'Type': 'varchar(1000)', 'Null': 'YES', 'Key': '', 'Default': 'None', 'Extra': ''}, {'Field': 'Employee_Title', 'Type': 'varchar(1000)', 'Null': 'YES', 'Key': '', 'Default': 'None', 'Extra': ''}]
   };
 
   const customers = {
-    'name': 'CUSTOMERS',
+    'name': 'customers',
     'columns': ['Field', 'Type', 'Null', 'Key', 'Default', 'Extra'],
     'results': [{'Field': 'CUSTOMER_ID', 'Type': 'bigint unsigned', 'Null': 'NO', 'Key': 'PRI', 'Default': '0', 'Extra': ''}, {'Field': 'COMPANY_ID', 'Type': 'bigint unsigned', 'Null': 'NO', 'Key': '', 'Default': '0', 'Extra': ''}, {'Field': 'Customer_ContactName', 'Type': 'varchar(1000)', 'Null': 'YES', 'Key': '', 'Default': 'None', 'Extra': ''}, {'Field': 'Customer_City', 'Type': 'varchar(1000)', 'Null': 'YES', 'Key': '', 'Default': 'None', 'Extra': ''}, {'Field': 'Customer_Country', 'Type': 'varchar(1000)', 'Null': 'YES', 'Key': '', 'Default': 'None', 'Extra': ''}, {'Field': 'Customer_Phone', 'Type': 'varchar(1000)', 'Null': 'YES', 'Key': '', 'Default': 'None', 'Extra': ''}]
   };
 
   const company = {
-    'name': 'COMPANY',
+    'name': 'company',
     'columns': ['Field', 'Type', 'Null', 'Key', 'Default', 'Extra'],
     'results': [{
       'Field': 'COMPANY_ID',
