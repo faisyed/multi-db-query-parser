@@ -152,7 +152,7 @@ const Home = ({ navigation }) => {
               onPress={executeQuery}
             />
           </View>
-        {showTable && (<View style={styles.tableContainerStyle}><TableContainer tableData={tableData}/></View>)}
+        {showTable && (<View style={{ maxHeight: '800px' }}><TableContainer tableData={tableData}/></View>)}
         {showChartButton && (
 
                   <View style={{...styles.button, margin: '8px'}}>
@@ -164,7 +164,7 @@ const Home = ({ navigation }) => {
         )}
         {showError && <ErrorComponent errorData = {errorMsg}/>}
         {!!chartData && chartData.length > 0 && (
-        <View>
+        <View style={{ height: '400px' }}>
             <Chart
                 style={{ height: 200, width: 400 }}
                 data={chartData}
@@ -214,11 +214,8 @@ const styles = StyleSheet.create({
   },
   button:{
     textAlign:'center',
-    marginLeft: 140,
-    width: 100
-  },
-  tableContainerStyle:{
-    minHeight: 800 
+    marginLeft:140,
+    width:100
   }
 });
 

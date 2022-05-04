@@ -35,7 +35,7 @@ export default class TableContainer extends Component {
 
                 {!!this.state.headers && this.state.headers.map((item, index) => {
                     return (
-                        <View style={styles.tableView}>
+                        <View style = {{ minHeight: '200px', maxHeight: '400px', width: '100%' }}>
                             <Text style={styles.textParent}>Query: <Text style={styles.textChild}>{this.state.queries[index]}</Text></Text>
                             <Text style={styles.textParent}>Execution Time: <Text style={styles.textChild}>{this.state.executionTimes[index]}</Text></Text>
                             <ResultTable headers={this.state.headers[index]} data={this.state.tableData[index]}/>
@@ -54,15 +54,14 @@ const styles = StyleSheet.create({
     paddingTop: 30,
     backgroundColor: '#ffffff' ,
     // width: '100%'
-    maxHeight: 600
+    maxHeight: '400px'
   },
   textParent:{
       fontSize: 16,
-      fontWeight: "200"
+      fontWeight: 200
   },
   textChild:{
       fontWeight: 'bold'
-  },
-  tableView:{ minHeight: 400, maxHeight: 600, width: '100%' }
+  }
 
 });
