@@ -104,7 +104,7 @@ const styles = StyleSheet.create({
     // width: '100%'
   },
   row: {
-    height: 40,
+    height: 50,
     backgroundColor: '#F7F8FA'
   }
 });
