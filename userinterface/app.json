@@ -17,15 +17,13 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true,
-      "bundleIdentifier": "com.praveenpin.snackdb2ba8b88d284605a319d464089be06f"
+      "supportsTablet": true
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
-      },
-      "package": "com.praveenpin.snackdb2ba8b88d284605a319d464089be06f"
+      }
     },
     "web": {
       "favicon": "./assets/favicon.png"

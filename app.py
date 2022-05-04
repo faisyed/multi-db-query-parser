@@ -43,46 +43,37 @@ def query_parse():
     database = database.lower()
 
     query = request.args.get("query")
-    # query = query
-    query_list = list(map(str, query.split(';')))
+    query = query
 
     schema = request.args.get("schema")
     schema = schema.lower()
 
-    result_list = []
-
     if database == "mysql":
         db_ins = MysqlDBInstance()
-        for que in query_list:
-            if que != '':
-                db_ins.create_connection(schema)
-                state, query, time, columns, results = db_ins.run_query(que)
-                response = {
-                    "state": state,
-                    "time": time,
-                    "columns": columns,
-                    "results": results,
-                    "query": query
-                }
-                result_list.append(response)
-                db_ins.close_connection()
-        return jsonify(result_list)
+        db_ins.create_connection(schema)
+        state, query, time, columns, results = db_ins.run_query(query)
+        db_ins.close_connection()
+        response = {
+            "state": state,
+            "time": time,
+            "columns": columns,
+            "results": results,
+            "query": query
+        }
+        return jsonify(response)
     elif database == "redshift":
         db_ins = RedshiftDBInstance()
-        for que in query_list:
-            if que != '':
-                db_ins.create_connection(schema)
-                state, query, time, columns, results = db_ins.run_query(que)
-                response = {
-                    "state": state,
-                    "time": time,
-                    "columns": columns,
-                    "results": results,
-                    "query": query
-                }
-                result_list.append(response)
-                db_ins.close_connection()
-        return jsonify(result_list)
+        db_ins.create_connection(schema)
+        state, query, time, columns, results = db_ins.run_query(query)
+        db_ins.close_connection()
+        response = {
+            "state": state,
+            "time": time,
+            "columns": columns,
+            "results": results,
+            "query": query
+        }
+        return jsonify(response)
 
 
 @app.route("/erdiagram", methods=["GET"])
@@ -97,4 +88,4 @@ def get_erdiagram():
 
 
 if __name__ == "__main__":
-    app.run("192.168.0.165", debug=True)
+    app.run(debug=True)
