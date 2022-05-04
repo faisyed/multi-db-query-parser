@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { StyleSheet, View, ScrollView } from 'react-native';
 import { Table, TableWrapper, Row } from 'react-native-table-component';
+import ErrorComponent from './ErrorComponent';
 
 
 export default class ResultTable extends Component {
@@ -8,25 +9,48 @@ export default class ResultTable extends Component {
     super(props);
     this.state = {
       tableHead: this.props.headers,
+      showError: this.props.headers == null ? true : false,
+      errorMsg: this.props.data
     }
   }
+
+  componentDidMount(){
+    console.log("this.props",this.props);
+    if(this.props.headers != null){
+      let oldState = ["S.No"];
+      for(let i = 0; i < this.props.headers.length; i++){
+        oldState.push(this.props.headers[i]);
+      }
+      this.setState({ tableHead: oldState });
+    }
+    else{
+      this.setState({ errorMsg: this.props.data });
+    }
+  }
+  
   render() {
+
+    if(this.state.showError){
+      return (
+        <ErrorComponent errorData = {this.state.errorMsg}/>
+      );
+    }
+
+
     const state = this.state;
-    // const widthArr = !!this.props.headers ? new Array(this.props.headers.length).fill(140) : [];
     let widthArr = [80];
-    for(let i = 0; i < this.props.headers.length -1; i++){
-        widthArr.push(140);
+    for(let i = 0; i < this.state.tableHead.length -1; i++){
+        widthArr.push(175);
     }
     let tableData = [];
     for(let i = 0; i < this.props.data.length; i++){
-        let row = [];
-        for(let j = 0; j < this.state.tableHead.length; j++){
+        let row = [i+1];
+        for(let j = 1; j < this.state.tableHead.length; j++){
             row.push(this.props.data[i][this.state.tableHead[j]]);
         }
         tableData.push(row);
     }
 
-    console.log(tableData);
     return (
       <View style={styles.container}>
         <ScrollView horizontal={true} keyboardShouldPersistTaps='never'>
