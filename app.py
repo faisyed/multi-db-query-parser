@@ -88,4 +88,4 @@ def get_erdiagram():
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run("192.168.0.165",port=5001,debug=True)

@@ -6,9 +6,10 @@ export default class ErrorComponent extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      errorMsg: this.props.errorData.error_msg,
-      errorNo: this.props.errorData.error_no,
-      errorState: this.props.errorData.sqlstate
+      errorMsg: this.props.errorData.results.error_msg,
+      errorNo: this.props.errorData.results.error_no,
+      errorState: this.props.errorData.results.sqlstate,
+      query: this.props.errorData.query
     }
   }
   render() {
@@ -16,6 +17,7 @@ export default class ErrorComponent extends Component {
     return (
       <ScrollView style={styles.container} keyboardShouldPersistTaps='never'>
             <Text style={styles.sideHeading}>Error Message: <Text style={styles.textValue}>{this.state.errorMsg}</Text></Text>
+            <Text style={styles.sideHeading}>Error Query: <Text style={styles.textValue}>{this.state.query}</Text></Text>
             <Text style={styles.sideHeading}>Error Number: <Text style={styles.textValue}>{this.state.errorNo}</Text></Text>
             <Text style={styles.sideHeading}>SQL Status: <Text style={styles.textValue}>{this.state.errorState}</Text></Text>
       </ScrollView>

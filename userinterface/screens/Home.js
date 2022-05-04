@@ -68,7 +68,7 @@ const Home = ({ navigation }) => {
 
     parseQuery(databaseType, schemaType, query).then((response) => {
       if(response.data.columns == null){
-        setErrorMsg(response.data.results);
+        setErrorMsg(response.data);
         setErrorStatus(true);
       }
       else{

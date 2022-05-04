@@ -10,17 +10,27 @@ export default class ResultTable extends Component {
       tableHead: this.props.headers,
     }
   }
+
+  componentDidMount(){
+    if(this.props.headers != null){
+      let oldState = ["S.No"];
+      for(let i = 0; i < this.props.headers.length; i++){
+        oldState.push(this.props.headers[i]);
+      }
+      this.setState({ tableHead: oldState });
+    }
+  }
+
   render() {
     const state = this.state;
-    // const widthArr = !!this.props.headers ? new Array(this.props.headers.length).fill(140) : [];
     let widthArr = [80];
-    for(let i = 0; i < this.props.headers.length -1; i++){
-        widthArr.push(140);
+    for(let i = 0; i < this.state.tableHead.length -1; i++){
+        widthArr.push(175);
     }
     let tableData = [];
     for(let i = 0; i < this.props.data.length; i++){
-        let row = [];
-        for(let j = 0; j < this.state.tableHead.length; j++){
+        let row = [i+1];
+        for(let j = 1; j < this.state.tableHead.length; j++){
             row.push(this.props.data[i][this.state.tableHead[j]]);
         }
         tableData.push(row);
@@ -80,7 +90,7 @@ const styles = StyleSheet.create({
     // width: '100%'
   },
   row: {
-    height: 40,
+    height: 50,
     backgroundColor: '#F7F8FA'
   }
 });

@@ -83,7 +83,7 @@ class MysqlDBInstance:
                 results = []
                 row = self.cursor.fetchone()
                 cnt = 1
-                while row and cnt<=2000:
+                while row and cnt<=500:
                     results.append(json_map_generator(columns, row))
                     row = self.cursor.fetchone()
                     cnt+=1
@@ -176,7 +176,7 @@ class RedshiftDBInstance:
                 results = []
                 counter = 0
                 row = self.cursor.fetchone()
-                while row and counter<=2000:
+                while row and counter<=500:
                     results.append(json_map_generator(columns, row))
                     row = self.cursor.fetchone()
                     counter+=1
